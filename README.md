@@ -1,0 +1,1 @@
+A basic monolithic personal website using Next.js, Chakra UI.
