@@ -5,6 +5,8 @@ package-lock.json
 # Optional REPL history
 .next
 .idea
+.vercel
+.env
 
 # Optional
-.eslintrc.json
+dist
