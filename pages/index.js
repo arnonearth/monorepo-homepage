@@ -13,12 +13,14 @@ import Section from '../components/section'
 import Paragraph from "../components/paragraph"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { BioSection, BioYear } from '../components/bio'
+import { AnimatePresence, motion } from "framer-motion"
 
 const Page = () => {
+  const avatarImg= `/images/arnons-avatar${useColorModeValue('', '-dark')}.png`
   return (
     <Container>
       <Box borderRadius="lg" 
-      bg={useColorModeValue('red.100', 'cyan.600')} 
+      bg={useColorModeValue('red.200', 'cyan.600')} 
       p={3} 
       mb={6} 
       align="center"
@@ -39,17 +41,27 @@ const Page = () => {
        ml={{ md: 6}}
        align="center"
        >
-         <Image 
-         bg={useColorModeValue('#FFF5F7', '#E6FFFA')}
-         borderColor={useColorModeValue('#FEB2B2', '#90CDF4')}
-         borderWidth={3} 
-         borderStyle="solid" 
-         maxWidth="100px" 
-         display="inline-block" 
-         borderRadius="full" 
-         src="/images/arnons-avatar.png" 
-         alt="Profile Image" 
-         />
+         <AnimatePresence exitBeforeEnter initial={false}>
+          <motion.div style={{ display: 'inline-block'}}
+          key={ useColorModeValue('light', 'dark')}
+          initial={{ y: 20, opacity: 0}}
+          animate={{ y: 0, opacity: 1}}
+          exit={{ y: -20, opacity: 0}}
+          transition={{ duration: 0.2}}
+          >
+              <Image 
+              bg={useColorModeValue('#FFF5F7', '#E6FFFA')}
+              borderColor={useColorModeValue('#FEB2B2', '#90CDF4')}
+              borderWidth={3} 
+              borderStyle="solid" 
+              maxWidth="100px" 
+              display="inline-block" 
+              borderRadius="full" 
+              src={avatarImg} 
+              alt="Profile Image" 
+              />
+            </motion.div>
+         </AnimatePresence>
        </Box>
       </Box>
 
@@ -67,7 +79,7 @@ const Page = () => {
         <NextLink href="/works">
           <Button 
           rightIcon={<ChevronRightIcon />}
-          bg={useColorModeValue('red.200', 'blue.500')}>
+          bg={useColorModeValue('red.200', 'cyan.600')}>
           My Selected Projects
           </Button>
         </NextLink>
