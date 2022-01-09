@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules
+package-lock.json
+
+# Optional REPL history
+.next
+.idea
+
+# Optional
+.eslintrc.json
