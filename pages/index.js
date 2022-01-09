@@ -96,7 +96,7 @@ const Page = () => {
       <Heading as="h3" variant="section-title">
         What I Enjoy
       </Heading>
-      <Paragraph>Learning Emerging Tech, Playing Electric Guitars, Novels, Geopolitics</Paragraph>
+      <Paragraph>Learning Emerging Tech, Electric Guitars, Novels, Geopolitics</Paragraph>
     </Section>
 
     </Container>
