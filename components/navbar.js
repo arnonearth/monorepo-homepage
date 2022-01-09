@@ -82,8 +82,12 @@ const Navbar = props => {
                     <Menu isLazy id="navbar-menu">
                         <MenuButton as={IconButton} 
                         aria-label='Options' 
-                        icon={< HamburgerIcon />}
-                        variant = "outline" />
+                        icon={< HamburgerIcon 
+                        color={useColorModeValue('#FC8181', '#63B3ED')}
+                        />}
+                        variant = "outline" 
+                        borderColor={useColorModeValue('#FC8181', '#63B3ED')}
+                        />
                             <MenuList>
                                 <NextLink href="/" passHref>
                                     <MenuItem as={Link}>About</MenuItem>
