@@ -32,14 +32,16 @@ const Logo = () => {
                             exit={{ y: 20, opacity: 0 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <Image src={guitarPickImg} width={20} height={20} alt="logo" />
+                            <Image src={guitarPickImg} width={25} height={25} alt="logo" />
                         </motion.div>
                     </AnimatePresence>
                     <Text
                         color={useColorModeValue('gray.800', 'whiteAlpha.900')}
                         fontFamily='M PLUS Rounded 1c'
                         fontWeight="bold"
-                        ml={3}>
+                        fontSize={16}
+                        ml={1}
+                        height={25}>
                         Arnon Saengarunwong
                     </Text>
                 </LogoBox>
