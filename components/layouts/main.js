@@ -16,7 +16,7 @@ const Main = ({ children, router }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Arnon's Homepage" />
         <meta name="author" content="Arnon Saengarunwong" />
-        <link rel="shortcut icon" href="/siteico.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
         <title>Arnon S. - Homepage</title>
       </Head>
