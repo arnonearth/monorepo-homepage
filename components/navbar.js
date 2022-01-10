@@ -75,7 +75,7 @@ const Navbar = props => {
                 {/* <LinkItem href="/posts" path={path}>
                     Posts
                 </LinkItem> */}
-                <Link href="https://arnons.dev" passHref={true} target="_blank" color={useColorModeValue('gray200', 'whiteAlpha.900')}>
+                <Link href="https://arnons.dev" target="_blank" color={useColorModeValue('gray200', 'whiteAlpha.900')}>
                     arnons.dev (main page)
                 </Link>
             </Stack>
