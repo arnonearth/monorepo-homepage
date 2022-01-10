@@ -41,7 +41,7 @@ const Logo = () => {
                         fontWeight="bold"
                         fontSize={16}
                         ml={1}
-                        height={25}>
+                        height={22}>
                         Arnon Saengarunwong
                     </Text>
                 </LogoBox>
