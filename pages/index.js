@@ -97,7 +97,7 @@ const Home = () => {
         </BioSection>
         <BioSection>
           <BioYear>2018</BioYear>
-          M.E. in ICT (The best thesis & academic performance), AIT
+          M.E. in ICT (Best thesis & academic performance), AIT
         </BioSection>
         <BioSection>
           <BioYear>2018 - present</BioYear>
