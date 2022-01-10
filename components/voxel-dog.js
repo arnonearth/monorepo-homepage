@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { Box, Spinner } from '@chakra-ui/react'
+import { ThreeDContainer, ThreeDSpinner } from './3d-object-loader'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
@@ -123,26 +123,9 @@ const VoxelDog = () => {
     }, [renderer, handleWindowResize])
 
     return (
-        <Box ref={refContainer} 
-        className='voxel-dog' 
-        m="auto" 
-        mt={['-20px', '-60px', '-120px']}
-        mb={['-40px', '-140px', '-200px']}
-        w={[280, 480, 640]}
-        h={[280, 480, 640]}
-        position="relative"
-        >
-            {loading && (
-                <Spinner 
-                size="xl" 
-                position="absolute"
-                left="50%"
-                top="50%"
-                ml="calc(0px - var(--spinner-size) / 2)"
-                mt="calc(0px - var(--spinner-size))"
-                />
-            )}
-        </Box>
+        <ThreeDContainer ref={refContainer}>
+          { loading && <ThreeDSpinner /> }
+        </ThreeDContainer>
     )
 }
 
