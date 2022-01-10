@@ -115,6 +115,13 @@ const VoxelDog = () => {
       }
     }, [])
 
+    useEffect(() => {
+      window.addEventListener('resize', handleWindowResize, false)
+      return() => {
+        window.removeEventListener('resize', handleWindowResize, false)
+      }
+    }, [renderer, handleWindowResize])
+
     return (
         <Box ref={refContainer} 
         className='voxel-dog' 
