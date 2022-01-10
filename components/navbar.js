@@ -20,6 +20,7 @@ import ThemeToggleButton from './theme-toggle-button'
 const LinkItem = ({ href, path, children}) => {
     const active = path === href
     const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+
     return (
         <NextLink href={href}>
             <Link
@@ -67,15 +68,16 @@ const Navbar = props => {
             flexGrow={1}
             mt={{ base: 4, nmd: 0 }}
             >
-                <LinkItem href="https://arnons.dev" path={path}>
-                    <a href="https://arnons.dev" target="_blank">arnons.dev (Main)</a>
-                </LinkItem>
+                               
                 <LinkItem href="/works" path={path}>
                     Works
                 </LinkItem>
                 {/* <LinkItem href="/posts" path={path}>
                     Posts
                 </LinkItem> */}
+                <Link href="https://arnons.dev" passHref={true} target="_blank" color={useColorModeValue('gray200', 'whiteAlpha.900')}>
+                    arnons.dev (main page)
+                </Link>
             </Stack>
 
             <Box flex={1} align="right">
@@ -101,7 +103,7 @@ const Navbar = props => {
                                 {/* <NextLink href="/posts" passHref>
                                     <MenuItem as={Link}>Posts</MenuItem>
                                 </NextLink> */}
-                                    <MenuItem as={Link} href="https://arnons.dev">View Official Homepage</MenuItem>
+                                    <MenuItem as={Link} href="https://arnons.dev" target="_blank">View Official Homepage</MenuItem>
                             </MenuList>
                     </Menu>
                 </Box>
