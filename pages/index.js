@@ -26,7 +26,7 @@ const Home = () => {
         mb={6} 
         align="center"
         >
-          Hello, I&apos;m a newbie developer based in Thailand!
+          Under Construction!
         </Box>
 
         <Box display={{md:'flex'}}>
